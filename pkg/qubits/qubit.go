@@ -42,3 +42,16 @@ func (q *Qubit) Measure() int {
 func (q *Qubit) String() string {
 	return fmt.Sprintf("α|0⟩ + β|1⟩ = [%v, %v]", q.State[0], q.State[1])
 }
+
+func (q *Qubit) ApplyGate(gate [][]complex128) {
+	newState := make([]complex128, len(q.State))
+
+	for i := range gate {
+		newState[i] = 0
+		for j := range gate[i] {
+			newState[i] += gate[i][j] * q.State[j]
+		}
+	}
+
+	q.State = newState
+}
