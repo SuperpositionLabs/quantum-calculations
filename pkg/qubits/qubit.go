@@ -10,9 +10,16 @@ type Qubit struct {
 	State []complex128
 }
 
+// Returns an normalized qubit
 func NewQubit(state []complex128) *Qubit {
 	q := &Qubit{State: state}
 	q.Normalize()
+	return q
+}
+
+// Returns an non normalized qubit
+func NewNNQubit(state []complex128) *Qubit {
+	q := &Qubit{State: state}
 	return q
 }
 
