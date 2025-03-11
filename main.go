@@ -5,9 +5,9 @@ import (
 	"math"
 	"math/cmplx"
 
-	"quantum-calculations/pkg/gates"
-	"quantum-calculations/pkg/operations"
-	"quantum-calculations/pkg/qubits"
+	"github.com/SuperpositionLabs/quantum-calculations/pkg/gates"
+	"github.com/SuperpositionLabs/quantum-calculations/pkg/operations"
+	"github.com/SuperpositionLabs/quantum-calculations/pkg/qubits"
 )
 
 func main() {

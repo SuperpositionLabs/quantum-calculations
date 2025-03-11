@@ -6,23 +6,24 @@ import (
 	"math/rand"
 )
 
+// Qubit represents a qubit with its state as a slice of complex numbers.
 type Qubit struct {
 	State []complex128
 }
 
-// Returns an normalized qubit
+// NewQubit returns a new normalized qubit from the given state.
 func NewQubit(state []complex128) *Qubit {
 	q := &Qubit{State: state}
 	q.Normalize()
 	return q
 }
 
-// Returns an non normalized qubit
+// NewNNQubit returns a new qubit without normalizing its initial state.
 func NewNNQubit(state []complex128) *Qubit {
-	q := &Qubit{State: state}
-	return q
+	return &Qubit{State: state}
 }
 
+// Normalize normalizes the qubit's state to ensure the sum of probabilities is 1.
 func (q *Qubit) Normalize() {
 	norm := 0.0
 	for _, amp := range q.State {
@@ -34,6 +35,7 @@ func (q *Qubit) Normalize() {
 	}
 }
 
+// Measure performs a measurement on the qubit and returns the index of the collapsed state.
 func (q *Qubit) Measure() int {
 	probabilities := make([]float64, len(q.State))
 	for i, amp := range q.State {
@@ -46,10 +48,12 @@ func (q *Qubit) Measure() int {
 	return outcome
 }
 
+// String returns a formatted representation of the qubit.
 func (q *Qubit) String() string {
 	return fmt.Sprintf("α|0⟩ + β|1⟩ = [%v, %v]", q.State[0], q.State[1])
 }
 
+// ApplyGate applies a quantum gate matrix to the qubit's state.
 func (q *Qubit) ApplyGate(gate [][]complex128) {
 	newState := make([]complex128, len(q.State))
 
