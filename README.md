@@ -3,6 +3,7 @@
 ![GitHub](https://img.shields.io/github/license/SuperpositionLabs/quantum-calculations)
 ![GitHub last commit](https://img.shields.io/github/last-commit/SuperpositionLabs/quantum-calculations)
 ![GitHub repo size](https://img.shields.io/github/repo-size/SuperpositionLabs/quantum-calculations)
+[![Docs](https://img.shields.io/badge/Go-Docs-blue)](https://pkg.go.dev/github.com/SuperpositionLabs/quantum-calculations)
 
 **Quantum Calculations** is a Go library dedicated to fundamental operations in quantum computing. This project aims to provide basic implementations of qubits, quantum gates, and associated operations, serving as a foundation for further studies and developments in the field of quantum computing.
 
