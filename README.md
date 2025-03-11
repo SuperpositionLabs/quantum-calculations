@@ -124,4 +124,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ---
 
 This `README.md` will be updated as the project progresses and new features are implemented. Feel free to explore, use, and contribute to the development of this quantum computing library in Go.
-```
